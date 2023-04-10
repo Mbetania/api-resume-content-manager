@@ -1,5 +1,5 @@
 import { NextApiRequest, NextApiResponse } from 'next';
-import handler from '../src/app/api/hello/route';
+import  handler from '../src/app/api/hello/route';
 
 describe('GET /api/hello', () => {
     it('should return 200 OK', async () => {

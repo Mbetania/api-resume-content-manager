@@ -1,5 +1,12 @@
 import { NextApiRequest, NextApiResponse } from 'next';
+import { getHandler, postHandler } from '../../../../mocks/handlers';
 
-export default async function handleGet(req: NextApiRequest, res: NextApiResponse) {
-  res.status(200).json({ text: 'Hello' });
+export default function handler(req: NextApiRequest, res: NextApiResponse) {
+  if (req.method === 'GET') {
+    return getHandler(req, res);
+  } else if (req.method === 'POST') {
+    return postHandler(req, res);
+  } else {
+    res.status(405).end(); // method not allowed
+  }
 }
