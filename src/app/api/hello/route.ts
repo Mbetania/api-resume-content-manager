@@ -1,5 +1,5 @@
 import { NextApiRequest, NextApiResponse } from 'next';
-import { getHandler, postHandler } from '../../../../mocks/handlers';
+import { getHandler, postHandler } from '../../../../pages/api/jsons/index';
 
 export default function handler(req: NextApiRequest, res: NextApiResponse) {
   if (req.method === 'GET') {

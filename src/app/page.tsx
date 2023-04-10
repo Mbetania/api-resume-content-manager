@@ -1,6 +1,5 @@
 import Image from 'next/image'
 import { Inter } from 'next/font/google'
-import  handler  from './api/hello/route';
 
 
 
@@ -22,5 +21,3 @@ export default function Home() {
     </div>
   );
 }
-
-export const getServerSideProps = handler;
